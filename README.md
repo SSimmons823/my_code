@@ -1,7 +1,5 @@
 # mycode (Project Title)
-Learning to track my code.
-One Paragraph of your project description goes here. Describe what you're trying to do.
-What is the purpose of putting up this repo?
+Learning to track my code. I want to learn how to version control projects with git.
 
 ## Getting Started
 
