@@ -18,6 +18,18 @@ def main():
         ## Decode the response
         got_dj = gotresp.json()
         pprint.pprint(got_dj)
+        #print(type(got_dj))
+        houses = got_dj.get('allegiances')
+        books = got_dj.get('books')
+        print(f"You chose character: {got_charToLookup}, who is {got_dj.get('name')}, who is of the house(s) {houses} and can be read about in the books {books}")
+        print("\nThey are in the house(s):")
+        for house in houses:
+            house_info = requests.get(house)
+            print(house_info.json().get('name'))
+        print("\nThey can be found in the book(s):")
+        for book in books:
+            book_info = requests.get(book)
+            print(book_info.json().get('name'))
 
 if __name__ == "__main__":
         main()
